@@ -10,7 +10,7 @@
             #CONNECTION TO MYSQL
             $this->host='localhost';
             $this->user='root';
-            $this->pass='';
+            $this->pass='4ND1N4%2016$';
             $this->db='rsa';
             $this->port='3306';
             $this->dns='mysql:dbname='.($this->db).';port='.($this->port).';host='.($this->host);

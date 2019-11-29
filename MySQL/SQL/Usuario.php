@@ -22,16 +22,18 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 
             if(count($ar_acceso) != 0){
                 $response['success']    = true;
-                $response['message']    = "Successfully";
+                $response['message']    = "Bienvenido"." ".$ar_acceso[0]['nombre']." ".$ar_acceso[0]['paterno']." ".$ar_acceso[0]['paterno'];
                 $response['idusuario']  = $ar_acceso[0]['idusuario'];
                 $response['nombre']     = $ar_acceso[0]['nombre'];
                 $response['paterno']    = $ar_acceso[0]['paterno'];
                 $response['materno']    = $ar_acceso[0]['materno'];
-                $response['dni']    = $ar_acceso[0]['dni'];
+                $response['dni']        = $ar_acceso[0]['dni'];
+            } else {
+                $response['success']    = false;
+                $response['message']    = "Usuario/Contraseña incorrecta";
             }
             break;
     endswitch;
-
 
 } else {
     $response['success'] = false;
